@@ -1,0 +1,41 @@
+body {
+    margin:0;
+    height: 100vh;
+    background-color: rgb(211, 211, 211);
+    display: flex;
+}
+
+#boxTetris {
+    position: relative;
+    background-color: #7200ac;
+    margin: auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 100px 0px black;
+    border-radius: 20px;
+    padding:3px;
+    border: 5px solid gray;    
+    
+}
+
+
+
+
+
+.quadrato {
+    background-color: #00000016;
+    box-shadow: 1px 1px black;
+    border-radius: 20px;
+}
+
+#showPoint {
+    font-size: 50px;
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
