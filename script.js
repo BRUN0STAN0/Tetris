@@ -69,7 +69,7 @@ for (var i = 0; i < numeroQuadrati; i++) {
 
 var arrayQuadratiGiaOccupati = [];
 
-var point = 0;
+var point = 100;
 
 var arrayQuadratiGiaOccupati = [];
 
@@ -84,10 +84,15 @@ for (var i = 0; i < width / dimensioniQuadrato; i++) {
   firstLine.push(i + 1);
 }
 
+var secondLine = [];
+for (var i = 0; i < width / dimensioniQuadrato; i++) {
+  secondLine.push(i + 1 + width / dimensioniQuadrato);
+}
+
 function createNewFormaQuadrato() {
   //* VELOCITA * //
 
-  velocitàRandom = Math.floor(Math.random() * 70);
+  velocitàRandom = Math.floor(Math.random() * 200);
 
   //* VELOCITA * //
   var formaQuadrato = document.createElement("div");
@@ -155,10 +160,10 @@ function createNewFormaQuadrato() {
       }
 
       var gameOver = arrayQuadratiGiaOccupati.filter(function (element) {
-        return firstLine.includes(element);
+        return secondLine.includes(element);
       });
 
-      if (gameOver.length > 0) {
+      if (gameOver.length > 0 || point == 0) {
         var confirmGameOver = confirm("Game Over! Vuoi ricominciare?" + "\n" + "Punteggio: " + point);
         if (!confirmGameOver) {
           location.reload();
